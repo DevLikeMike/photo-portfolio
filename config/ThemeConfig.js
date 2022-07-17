@@ -1,0 +1,15 @@
+export const theme = {
+  desktop: "900px",
+  mdMobile: "768px",
+  smMobile: "500px",
+  lightGray: "#55535380",
+  medGray: "#292929",
+  medGrayHalf: "#29292980",
+  darkGray: "#333333",
+  white: "#ffffff",
+  offWhite: "#f0f0f0",
+  primary: "#555555",
+  primaryDark: "#fa3963",
+  standardPadding: "3rem",
+  mobilePadding: "1rem",
+};
