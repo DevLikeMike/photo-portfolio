@@ -6,11 +6,7 @@ import { theme } from "../config/ThemeConfig";
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      <Layout>
-        <main>
-          <Component {...pageProps} />
-        </main>
-      </Layout>
+      <Component {...pageProps} />
     </ThemeProvider>
   );
 }

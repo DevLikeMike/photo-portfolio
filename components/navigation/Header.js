@@ -7,27 +7,32 @@ import SideNav from "./SideNav";
 import styled from "styled-components";
 
 const Navbar = styled.nav`
+  position: absolute;
+  top: 0;
   width: 100vw;
   height: 3rem;
-  position: fixed;
-  top: 0;
   display: flex;
-  justify-content: flex-end;
-  background-color: #fff;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  justify-content: space-around;
+  background-color: transparent;
   z-index: 100;
-  @media (min-width: 768px) {
-    justify-content: center;
+  letter-spacing: 0.1em;
+  color: #000;
+
+  h2 {
+    font-size: 1.2rem;
+    justify-self: flex-start;
+    align-self: center;
+    margin-right: auto;
+    padding-left: 2rem;
   }
 `;
 
 const NavList = styled.ul`
   height: 3rem;
-  color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 3px;
 `;
 
 const NavItem = styled.li`
@@ -35,20 +40,19 @@ const NavItem = styled.li`
   align-items: center;
   list-style: none;
   padding: 0 2rem;
-  font-size: 1.333rem;
+  font-size: 1.15rem;
   height: 80%;
   display: none;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: ${({ theme }) => theme.primaryPurple};
-    color: #fff;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-  }
+  transition: color 0.5s ease-in-out;
 
   a {
     text-decoration: none;
     color: inherit;
+
+    &:hover {
+      color: #000;
+      text-decoration: underline;
+    }
   }
 
   @media (min-width: 768px) {
@@ -65,6 +69,7 @@ export default function Header() {
 
   return (
     <Navbar>
+      <h2>M H | Photography</h2>
       <NavList>
         <NavItem>
           <Link href='/'>
@@ -73,14 +78,14 @@ export default function Header() {
         </NavItem>
 
         <NavItem>
-          <Link href='/about'>
-            <a>About</a>
+          <Link href='/portfolio'>
+            <a>Portfolio</a>
           </Link>
         </NavItem>
 
         <NavItem>
-          <Link href='/services'>
-            <a>Services</a>
+          <Link href='/projects'>
+            <a>Projects</a>
           </Link>
         </NavItem>
 
